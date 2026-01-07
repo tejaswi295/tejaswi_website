@@ -1,89 +1,195 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.7.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.7.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.7.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.7.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.7.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.7.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.7.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.7.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.7.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.7.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G Tejaswi | Resume</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f6f8;
+            color: #333;
         }
-      });
-    </script>
-  </body>
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 6px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        section {
+            margin-top: 25px;
+        }
+        section h2 {
+            font-size: 20px;
+            color: #222;
+            border-left: 5px solid #0077b6;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+        .content p {
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        ul {
+            padding-left: 20px;
+            margin: 8px 0;
+        }
+        ul li {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+        .edu-item, .project-item {
+            margin-bottom: 12px;
+        }
+        .edu-item span {
+            font-weight: bold;
+        }
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 8px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>G Tejaswi</h1>
+            <p>📞 8328657268 | ✉️ tejaswig232@gmail.com</p>
+            <p>B.Tech – Information Technology</p>
+        </header>
+
+        <section>
+            <h2>Objective</h2>
+            <div class="content">
+                <p>
+                    Enthusiastic and detail-oriented Information Technology student with a strong foundation in
+                    programming, networking, and problem-solving. Passionate about leveraging technical skills
+                    to develop innovative solutions, optimize processes, and contribute to dynamic projects
+                    in a fast-paced environment.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="content">
+                <div class="edu-item">
+                    <span>2020 – 2023:</span> B.Tech in Information Technology, VNR-VJIET
+                </div>
+                <div class="edu-item">
+                    <span>2016 – 2020:</span> Telangana State Board of Intermediate Education, Narayana Junior College
+                </div>
+                <div class="edu-item">
+                    <span>2011 – 2021:</span> CBSE Board, Kendriya Vidyalaya
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="content skills-list">
+                <ul>
+                    <li><strong>Programming:</strong> Python, C, Java, R</li>
+                    <li><strong>Databases:</strong> MySQL, MongoDB</li>
+                </ul>
+                <ul>
+                    <li><strong>Web:</strong> HTML, CSS, Bootstrap, JavaScript, React.js, Node.js</li>
+                    <li><strong>Data Visualization:</strong> PowerBI, Tableau</li>
+                </ul>
+                <ul>
+                    <li><strong>Tools:</strong> Git, GitHub, Canva</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div class="content">
+                <div class="project-item">
+                    <strong>Personal Finance Tracker</strong>
+                    <ul>
+                        <li>Technologies: Python, MySQL, PowerBI / Tableau</li>
+                        <li>Expense tracking, categorized analysis, and interactive dashboards.</li>
+                    </ul>
+                </div>
+                <div class="project-item">
+                    <strong>E-Commerce Website (Full Stack)</strong>
+                    <ul>
+                        <li>Technologies: React.js, Node.js, MongoDB, Bootstrap</li>
+                        <li>User authentication, product listing, cart system, responsive UI.</li>
+                    </ul>
+                </div>
+                <div class="project-item">
+                    <strong>Task Management System</strong>
+                    <ul>
+                        <li>Technologies: React.js, Node.js, MongoDB</li>
+                        <li>CRUD operations, task prioritization, drag-and-drop organization.</li>
+                    </ul>
+                </div>
+                <div class="project-item">
+                    <strong>Slot Booking System</strong>
+                    <ul>
+                        <li>Technologies: React.js, Node.js, MongoDB / MySQL</li>
+                        <li>Real-time availability, email notifications, authentication.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Achievements</h2>
+            <ul>
+                <li>Participated in a 24-hour hackathon developing an online bidding system.</li>
+                <li>Created data dashboards using PowerBI/Tableau for large datasets.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <ul>
+                <li>Maintenance and Usage of 3D Printing with AutoCAD</li>
+                <li>Course on Data Visualization</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Declaration</h2>
+            <p>
+                I confirm that the information provided above is accurate and truthful to the best of my knowledge.
+            </p>
+        </section>
+
+        <footer>
+            © 2026 G Tejaswi | Personal Resume Webpage
+        </footer>
+    </div>
+</body>
 </html>
+
+
